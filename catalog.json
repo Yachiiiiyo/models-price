@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "catalog_version": "1.4.0",
-  "updated_at": "2026-10-09T07:10:00Z",
+  "catalog_version": "1.5.0",
+  "updated_at": "2026-10-14T00:00:00Z",
   "brands": {
     "minimax": {
       "display_name": "minimax",
@@ -2226,6 +2226,88 @@
     "google": {
       "display_name": "google",
       "models": {
+        "gemini-4-argon": {
+          "model_key": "gemini-4-argon",
+          "display_name": "Gemini 4 Argon",
+          "provider": "google",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": true,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "google-gemini",
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1048576,
+          "max_output_tokens": 65536,
+          "input_price": 2.0,
+          "output_price": 10.0,
+          "cache_read_ratio": 0.05,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "standard_from_2026_12_01": {
+              "effective_from": "2026-12-01",
+              "input_price": 4.0,
+              "output_price": 20.0,
+              "cache_read": 0.2
+            },
+            "long_decode": {
+              "max_output_tokens": 1048576
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "gemini-4-argon",
+          "name": "Gemini 4 Argon",
+          "description": "Google's flagship Gemini 4 reasoning model for complex software engineering, math and science, multi-step agents, and long decode",
+          "family": "gemini-argon",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "knowledge": "2026-03",
+          "release_date": "2026-09-30",
+          "last_updated": "2026-10-13",
+          "open_weights": false,
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.1
+          }
+        },
         "gemma-4-26b-a4b-it": {
           "model_key": "gemma-4-26b-a4b-it",
           "display_name": "Gemma 4 26B A4B IT",

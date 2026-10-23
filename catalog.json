@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "catalog_version": "1.5.0",
-  "updated_at": "2026-10-14T00:00:00Z",
+  "catalog_version": "1.6.0",
+  "updated_at": "2026-10-24T00:00:00Z",
   "brands": {
     "minimax": {
       "display_name": "minimax",
@@ -7242,6 +7242,162 @@
     "moonshotai-cn": {
       "display_name": "moonshotai-cn",
       "models": {
+        "kimi-k3.1-pro": {
+          "model_key": "kimi-k3.1-pro",
+          "display_name": "Kimi K3.1 Pro",
+          "provider": "moonshotai-cn",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai",
+            "openai-response",
+            "anthropic-messages"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1048576,
+          "max_output_tokens": 131072,
+          "input_price": 2.0,
+          "output_price": 10.0,
+          "cache_read_ratio": 0.1,
+          "cache_write_ratio": 1.0,
+          "cache_write_1h_ratio": 2.0,
+          "pricing_variants": {
+            "extended_output": {
+              "max_output_tokens": 1048576
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "description": "Flagship Kimi K3.1 model with 1M context, always-on thinking, and native image and video understanding for coding and agent work",
+          "family": "kimi-k3.1",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "high",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "structured_output": true,
+          "temperature": false,
+          "release_date": "2026-10-24",
+          "last_updated": "2026-10-24",
+          "open_weights": true,
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 2.0,
+            "output": 10.0,
+            "cache_read": 0.2,
+            "cache_write": 2.0
+          }
+        },
+        "kimi-k3.1-pro-highspeed": {
+          "model_key": "kimi-k3.1-pro-highspeed",
+          "display_name": "Kimi K3.1 Pro Highspeed",
+          "provider": "moonshotai-cn",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai",
+            "openai-response",
+            "anthropic-messages"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1048576,
+          "max_output_tokens": 131072,
+          "input_price": 4.0,
+          "output_price": 20.0,
+          "cache_read_ratio": 0.05,
+          "cache_write_ratio": 1.0,
+          "cache_write_1h_ratio": 2.0,
+          "pricing_variants": {
+            "extended_output": {
+              "max_output_tokens": 1048576
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "description": "High-speed Kimi K3.1 Pro variant with the same capabilities at about 2-3x output speed",
+          "family": "kimi-k3.1",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "high",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "structured_output": true,
+          "temperature": false,
+          "release_date": "2026-10-24",
+          "last_updated": "2026-10-24",
+          "open_weights": true,
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 4.0,
+            "output": 20.0,
+            "cache_read": 0.2,
+            "cache_write": 4.0
+          }
+        },
         "kimi-k3": {
           "model_key": "kimi-k3",
           "display_name": "Kimi K3",
@@ -7274,8 +7430,8 @@
           "input_price": 3.0,
           "output_price": 15.0,
           "cache_read_ratio": 0.1,
-          "cache_write_ratio": null,
-          "cache_write_1h_ratio": null,
+          "cache_write_ratio": 1.0,
+          "cache_write_1h_ratio": 2.0,
           "pricing_source": "manual",
           "status": "active",
           "id": "kimi-k3",
@@ -7313,7 +7469,8 @@
           "cost": {
             "input": 3,
             "output": 15,
-            "cache_read": 0.3
+            "cache_read": 0.3,
+            "cache_write": 3
           }
         },
         "kimi-k2.7-code": {

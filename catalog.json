@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "catalog_version": "1.7.0",
-  "updated_at": "2026-10-31T00:00:00Z",
+  "catalog_version": "1.8.0",
+  "updated_at": "2026-11-04T00:00:00Z",
   "brands": {
     "minimax": {
       "display_name": "minimax",
@@ -39,7 +39,7 @@
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2",
           "name": "MiniMax-M2",
           "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
@@ -96,7 +96,7 @@
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2.1",
           "name": "MiniMax-M2.1",
           "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
@@ -153,7 +153,7 @@
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2.5",
           "name": "MiniMax-M2.5",
           "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
@@ -210,7 +210,7 @@
           "cache_write_ratio": 0.625,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2.5-highspeed",
           "name": "MiniMax-M2.5-highspeed",
           "description": "High-speed MiniMax model for low-latency coding and agent workflows",
@@ -232,6 +232,75 @@
             "output": 2.4,
             "cache_read": 0.03,
             "cache_write": 0.375
+          }
+        },
+        "MiniMax-M3.1-Flash": {
+          "model_key": "MiniMax-M3.1-Flash",
+          "display_name": "MiniMax-M3.1-Flash",
+          "provider": "minimax",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai",
+            "anthropic-messages"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1048576,
+          "max_output_tokens": 524288,
+          "input_price": 0.15,
+          "output_price": 0.6,
+          "cache_read_ratio": 0.1,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "description": "Ultra-efficient open-weight MiniMax model with 1M context, image/video input, and tunable thinking depth",
+          "family": "minimax",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "temperature": true,
+          "release_date": "2026-10-19",
+          "last_updated": "2026-10-19",
+          "open_weights": true,
+          "limit": {
+            "context": 1048576,
+            "output": 524288
+          },
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
           }
         },
         "MiniMax-M3": {
@@ -262,12 +331,29 @@
             ]
           },
           "context_window": 1048576,
-          "max_output_tokens": 512000,
+          "max_output_tokens": 524288,
           "input_price": 0.3,
           "output_price": 1.2,
           "cache_read_ratio": 0.2,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_512k": {
+              "input_price": 0.6,
+              "output_price": 2.4,
+              "cache_read": 0.12
+            },
+            "priority": {
+              "input_price": 0.45,
+              "output_price": 1.8,
+              "cache_read": 0.09
+            },
+            "priority_input_over_512k": {
+              "input_price": 0.9,
+              "output_price": 3.6,
+              "cache_read": 0.18
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "MiniMax-M3",
@@ -288,7 +374,7 @@
           "open_weights": true,
           "limit": {
             "context": 1048576,
-            "output": 512000
+            "output": 524288
           },
           "cost": {
             "input": 0.3,
@@ -345,7 +431,7 @@
           "cache_write_ratio": 0.625,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2.7-highspeed",
           "name": "MiniMax-M2.7-highspeed",
           "description": "Low-latency M2.7 variant for interactive coding plans and agent loops",
@@ -402,7 +488,7 @@
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "MiniMax-M2.7",
           "name": "MiniMax-M2.7",
           "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
@@ -461,7 +547,7 @@
           "max_output_tokens": 128000,
           "input_price": 2.0,
           "output_price": 10.0,
-          "cache_read_ratio": 0.1,
+          "cache_read_ratio": 0.05,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": 2,
           "pricing_source": "manual",
@@ -498,7 +584,7 @@
           "cost": {
             "input": 2,
             "output": 10,
-            "cache_read": 0.2,
+            "cache_read": 0.1,
             "cache_write": 2.5
           }
         },
@@ -609,6 +695,15 @@
           "cache_read_ratio": 0.05,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": 2,
+          "pricing_variants": {
+            "fast": {
+              "input_price": 8.0,
+              "output_price": 40.0,
+              "cache_read": 0.4,
+              "cache_write": 10.0,
+              "cache_write_1h": 16.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "claude-opus-5-5",
@@ -639,6 +734,23 @@
           "limit": {
             "context": 1000000,
             "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "fast": {
+                "cost": {
+                  "input": 8,
+                  "output": 40,
+                  "cache_read": 0.4,
+                  "cache_write": 10
+                },
+                "provider": {
+                  "body": {
+                    "speed": "fast"
+                  }
+                }
+              }
+            }
           },
           "cost": {
             "input": 4,
@@ -680,6 +792,15 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": 2,
+          "pricing_variants": {
+            "fast": {
+              "input_price": 10.0,
+              "output_price": 50.0,
+              "cache_read": 1.0,
+              "cache_write": 12.5,
+              "cache_write_1h": 20.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "claude-opus-5",
@@ -1470,6 +1591,15 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": 2,
+          "pricing_variants": {
+            "fast": {
+              "input_price": 10.0,
+              "output_price": 50.0,
+              "cache_read": 1.0,
+              "cache_write": 12.5,
+              "cache_write_1h": 20.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "claude-opus-4-8",
@@ -2401,6 +2531,23 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_200k": {
+              "input_price": 4.0,
+              "output_price": 18.0,
+              "cache_read": 0.4
+            },
+            "priority": {
+              "input_price": 3.6,
+              "output_price": 21.6,
+              "cache_read": 0.36
+            },
+            "priority_input_over_200k": {
+              "input_price": 7.2,
+              "output_price": 32.4,
+              "cache_read": 0.72
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-pro-preview-customtools",
@@ -2479,12 +2626,17 @@
             ]
           },
           "context_window": 65536,
-          "max_output_tokens": 65536,
+          "max_output_tokens": 4096,
           "input_price": 0.25,
           "output_price": 30.0,
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "text_output": {
+              "output_price": 1.5
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-flash-lite-image",
@@ -2511,7 +2663,7 @@
           "open_weights": false,
           "limit": {
             "context": 65536,
-            "output": 65536
+            "output": 4096
           },
           "cost": {
             "input": 0.25,
@@ -2736,13 +2888,18 @@
               "image"
             ]
           },
-          "context_window": 131072,
+          "context_window": 65536,
           "max_output_tokens": 32768,
           "input_price": 2.0,
           "output_price": 120.0,
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "text_output": {
+              "output_price": 12.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3-pro-image",
@@ -2767,7 +2924,7 @@
           "last_updated": "2026-05-28",
           "open_weights": false,
           "limit": {
-            "context": 131072,
+            "context": 65536,
             "output": 32768
           },
           "cost": {
@@ -2810,6 +2967,23 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_200k": {
+              "input_price": 4.0,
+              "output_price": 18.0,
+              "cache_read": 0.4
+            },
+            "priority": {
+              "input_price": 3.6,
+              "output_price": 21.6,
+              "cache_read": 0.36
+            },
+            "priority_input_over_200k": {
+              "input_price": 7.2,
+              "output_price": 32.4,
+              "cache_read": 0.72
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-pro-preview",
@@ -3116,6 +3290,26 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "standard_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 1.5,
+              "output_price": 7.5,
+              "cache_read": 0.15,
+              "input_audio": 1.5
+            },
+            "priority": {
+              "input_price": 1.35,
+              "output_price": 6.75,
+              "cache_read": 0.135
+            },
+            "priority_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 2.7,
+              "output_price": 13.5,
+              "cache_read": 0.27
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.6-flash",
@@ -3189,6 +3383,14 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "priority": {
+              "input_price": 0.45,
+              "output_price": 2.7,
+              "cache_read": 0.045,
+              "input_audio": 0.9
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-flash-lite",
@@ -3261,6 +3463,11 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "image_video_input": {
+              "input_price": 1.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-flash-live-preview",
@@ -3382,11 +3589,31 @@
           },
           "context_window": 1048576,
           "max_output_tokens": 65536,
-          "input_price": 1.5,
-          "output_price": 9.0,
+          "input_price": 0.75,
+          "output_price": 3.75,
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "standard_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 1.5,
+              "output_price": 7.5,
+              "cache_read": 0.15,
+              "input_audio": 1.5
+            },
+            "priority": {
+              "input_price": 1.35,
+              "output_price": 6.75,
+              "cache_read": 0.135
+            },
+            "priority_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 2.7,
+              "output_price": 13.5,
+              "cache_read": 0.27
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.5-flash",
@@ -3418,10 +3645,10 @@
             "output": 65536
           },
           "cost": {
-            "input": 1.5,
-            "output": 9,
-            "cache_read": 0.15,
-            "input_audio": 1.5
+            "input": 0.75,
+            "output": 3.75,
+            "cache_read": 0.075,
+            "input_audio": 0.75
           }
         },
         "veo-3.1-generate-preview": {
@@ -3511,7 +3738,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "gemini-3.1-flash-lite-preview",
           "name": "Gemini 3.1 Flash Lite Preview",
           "description": "Legacy model retained for compatibility with older integrations",
@@ -3734,13 +3961,18 @@
               "image"
             ]
           },
-          "context_window": 65536,
-          "max_output_tokens": 65536,
+          "context_window": 131072,
+          "max_output_tokens": 32768,
           "input_price": 0.5,
           "output_price": 60,
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "text_output": {
+              "output_price": 3.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.1-flash-image",
@@ -3765,8 +3997,8 @@
           "last_updated": "2026-05-28",
           "open_weights": false,
           "limit": {
-            "context": 65536,
-            "output": 65536
+            "context": 131072,
+            "output": 32768
           },
           "cost": {
             "input": 0.5,
@@ -3809,6 +4041,13 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "priority": {
+              "input_price": 0.54,
+              "output_price": 4.5,
+              "cache_read": 0.05
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.5-flash-lite",
@@ -3880,7 +4119,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "gemini-3-pro-image-preview",
           "name": "Nano Banana Pro",
           "description": "Nano Banana Pro for higher-fidelity image generation and design-heavy edits",
@@ -4232,6 +4471,14 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "priority": {
+              "input_price": 0.9,
+              "output_price": 5.4,
+              "cache_read": 0.09,
+              "input_audio": 1.8
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3-flash-preview",
@@ -4304,6 +4551,26 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "standard_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 1.5,
+              "output_price": 7.5,
+              "cache_read": 0.15,
+              "input_audio": 1.5
+            },
+            "priority": {
+              "input_price": 1.35,
+              "output_price": 6.75,
+              "cache_read": 0.135
+            },
+            "priority_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 2.7,
+              "output_price": 13.5,
+              "cache_read": 0.27
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.8-flash",
@@ -4364,8 +4631,8 @@
               "text"
             ]
           },
-          "context_window": 16384,
-          "max_output_tokens": 32768,
+          "context_window": 131072,
+          "max_output_tokens": 65536,
           "input_price": 3.5,
           "output_price": 21.0,
           "cache_read_ratio": null,
@@ -4386,8 +4653,8 @@
           "last_updated": "2026-06-09",
           "open_weights": false,
           "limit": {
-            "context": 16384,
-            "output": 32768
+            "context": 131072,
+            "output": 65536
           },
           "cost": {
             "input": 3.5,
@@ -4487,6 +4754,26 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "standard_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 1.5,
+              "output_price": 7.5,
+              "cache_read": 0.15,
+              "input_audio": 1.5
+            },
+            "priority": {
+              "input_price": 1.35,
+              "output_price": 6.75,
+              "cache_read": 0.135
+            },
+            "priority_from_2027_01_01": {
+              "effective_from": "2027-01-01",
+              "input_price": 2.7,
+              "output_price": 13.5,
+              "cache_read": 0.27
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gemini-3.7-flash",
@@ -4714,7 +5001,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "gemini-3.1-flash-image-preview",
           "name": "Nano Banana 2",
           "description": "Image model for prompt-driven generation, editing, and visual design workflows",
@@ -5213,7 +5500,8 @@
           "cache_write_ratio": 1.0,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived",
+          "release_date": "2025-11-18"
         },
         "gemini-live-2.5-flash-preview-native-audio": {
           "model_key": "gemini-live-2.5-flash-preview-native-audio",
@@ -5854,7 +6142,7 @@
           "max_output_tokens": 131072,
           "input_price": 1.4,
           "output_price": 4.4,
-          "cache_read_ratio": 0.18571429,
+          "cache_read_ratio": 0.1857142857,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
@@ -5880,8 +6168,8 @@
           },
           "structured_output": true,
           "temperature": true,
-          "release_date": "2026-06-13",
-          "last_updated": "2026-06-13",
+          "release_date": "2026-06-16",
+          "last_updated": "2026-06-16",
           "open_weights": false,
           "limit": {
             "context": 1000000,
@@ -5965,6 +6253,78 @@
             "input": 0.15,
             "output": 0.5,
             "cache_read": 0.03,
+            "cache_write": 0
+          }
+        },
+        "glm-5.3-flashx": {
+          "model_key": "glm-5.3-flashx",
+          "display_name": "GLM-5.3-FlashX",
+          "provider": "zhipuai",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai",
+            "openai-response",
+            "anthropic-messages"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 131072,
+          "input_price": 0.37,
+          "output_price": 1.25,
+          "cache_read_ratio": 0.2027027027,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "glm-5.3-flashx",
+          "name": "GLM-5.3-FlashX",
+          "description": "Faster-serving GLM-5.3-Flash variant (about 200 tokens/s) for latency-sensitive coding and agent tasks",
+          "family": "glm",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "effort",
+              "values": [
+                "low",
+                "high",
+                "max"
+              ]
+            }
+          ],
+          "tool_call": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "structured_output": true,
+          "temperature": true,
+          "open_weights": true,
+          "limit": {
+            "context": 1000000,
+            "output": 131072
+          },
+          "cost": {
+            "input": 0.37,
+            "output": 1.25,
+            "cache_read": 0.075,
             "cache_write": 0
           }
         },
@@ -6154,8 +6514,8 @@
           },
           "structured_output": true,
           "temperature": true,
-          "release_date": "2026-08-14",
-          "last_updated": "2026-08-14",
+          "release_date": "2026-08-18",
+          "last_updated": "2026-08-18",
           "open_weights": true,
           "limit": {
             "context": 1000000,
@@ -6836,7 +7196,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "deepseek-v4-flash-vision-exp",
           "name": "DeepSeek V4 Flash Vision Exp",
           "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
@@ -6912,7 +7272,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "deepseek-v4-flash",
           "name": "DeepSeek V4 Flash",
           "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
@@ -6983,9 +7343,17 @@
           "max_output_tokens": 384000,
           "input_price": 0.66,
           "output_price": 1.98,
-          "cache_read_ratio": 0.03333333,
+          "cache_read_ratio": 0.0333333333,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "peak": {
+              "schedule": "Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays",
+              "input_price": 1.32,
+              "output_price": 3.96,
+              "cache_read": 0.044
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "deepseek-v4-pro",
@@ -7012,7 +7380,7 @@
           },
           "structured_output": true,
           "temperature": true,
-          "release_date": "2026-08-12",
+          "release_date": "2026-08-13",
           "last_updated": "2026-08-22",
           "open_weights": true,
           "limit": {
@@ -7060,6 +7428,14 @@
           "cache_read_ratio": 0.02,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "peak": {
+              "schedule": "Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays",
+              "input_price": 0.3,
+              "output_price": 1.2,
+              "cache_read": 0.006
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "deepseek-flash",
@@ -7089,7 +7465,7 @@
           "temperature": true,
           "knowledge": "2025-05",
           "release_date": "2026-09-10",
-          "last_updated": "2026-09-10",
+          "last_updated": "2026-10-17",
           "open_weights": true,
           "limit": {
             "context": 1000000,
@@ -7127,7 +7503,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "deepseek-chat": {
           "model_key": "deepseek-chat",
@@ -7154,7 +7530,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "deepseek-v4.1-flash": {
           "model_key": "deepseek-v4.1-flash",
@@ -7190,6 +7566,14 @@
           "cache_read_ratio": 0.02,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "peak": {
+              "schedule": "Mon-Fri 01:00-04:00 and 06:00-10:00 UTC, excluding Chinese public holidays",
+              "input_price": 0.3,
+              "output_price": 1.2,
+              "cache_read": 0.006
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "deepseek-v4.1-flash",
@@ -7219,7 +7603,7 @@
           "temperature": true,
           "knowledge": "2025-05",
           "release_date": "2026-09-10",
-          "last_updated": "2026-09-10",
+          "last_updated": "2026-10-17",
           "open_weights": true,
           "limit": {
             "context": 1000000,
@@ -7234,7 +7618,7 @@
           "aliases": [
             "deepseek-flash",
             "deepseek-v4-flash",
-            "deepseek-v4.1-flash"
+            "deepseek-v4-flash-vision-exp"
           ]
         }
       }
@@ -7432,6 +7816,11 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.0,
           "cache_write_1h_ratio": 2.0,
+          "pricing_variants": {
+            "extended_output": {
+              "max_output_tokens": 1048576
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "kimi-k3",
@@ -8231,8 +8620,34 @@
           "input_price": 4,
           "output_price": 20,
           "cache_read_ratio": 0.1,
-          "cache_write_ratio": null,
+          "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 10.0
+            },
+            "input_over_272k": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            },
+            "fast": {
+              "input_price": 8.0,
+              "output_price": 40.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 16.0,
+              "output_price": 60.0,
+              "cache_read": 1.6,
+              "cache_write": 20.0,
+              "cache_write_12h": 40.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-5.6-sol",
@@ -8408,6 +8823,46 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 25.0
+            },
+            "input_over_272k": {
+              "input_price": 20.0,
+              "output_price": 75.0,
+              "cache_read": 2.0,
+              "cache_write": 25.0,
+              "cache_write_12h": 50.0
+            },
+            "fast": {
+              "input_price": 20.0,
+              "output_price": 100.0,
+              "cache_read": 2.0,
+              "cache_write": 25.0,
+              "cache_write_12h": 50.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 40.0,
+              "output_price": 150.0,
+              "cache_read": 4.0,
+              "cache_write": 50.0,
+              "cache_write_12h": 100.0
+            },
+            "ultrafast": {
+              "input_price": 60.0,
+              "output_price": 300.0,
+              "cache_read": 6.0,
+              "cache_write": 75.0,
+              "cache_write_12h": 150.0
+            },
+            "ultrafast_input_over_272k": {
+              "input_price": 120.0,
+              "output_price": 450.0,
+              "cache_read": 12.0,
+              "cache_write": 150.0,
+              "cache_write_12h": 300.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-6-astra",
@@ -8461,6 +8916,19 @@
                     "reasoning": {
                       "mode": "pro"
                     }
+                  }
+                }
+              },
+              "ultrafast": {
+                "cost": {
+                  "input": 60.0,
+                  "output": 300.0,
+                  "cache_read": 6.0,
+                  "cache_write": 75.0
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "ultrafast"
                   }
                 }
               }
@@ -8525,6 +8993,32 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 5.0
+            },
+            "input_over_272k": {
+              "input_price": 4.0,
+              "output_price": 15.0,
+              "cache_read": 0.4,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast": {
+              "input_price": 4.0,
+              "output_price": 20.0,
+              "cache_read": 0.4,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-6-sol",
@@ -8550,11 +9044,30 @@
           "structured_output": true,
           "temperature": false,
           "knowledge": "2026-04-20",
+          "release_date": "2026-09-22",
+          "last_updated": "2026-09-22",
           "open_weights": false,
           "limit": {
             "context": 1050000,
             "input": 922000,
             "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "fast": {
+                "cost": {
+                  "input": 4.0,
+                  "output": 20.0,
+                  "cache_read": 0.4,
+                  "cache_write": 5.0
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "priority"
+                  }
+                }
+              }
+            }
           },
           "cost": {
             "input": 2.0,
@@ -8615,6 +9128,46 @@
           "cache_read_ratio": 0.05,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 5.0
+            },
+            "input_over_272k": {
+              "input_price": 4.0,
+              "output_price": 15.0,
+              "cache_read": 0.2,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast": {
+              "input_price": 4.0,
+              "output_price": 20.0,
+              "cache_read": 0.2,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 0.4,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            },
+            "ultrafast": {
+              "input_price": 12.0,
+              "output_price": 60.0,
+              "cache_read": 0.6,
+              "cache_write": 15.0,
+              "cache_write_12h": 30.0
+            },
+            "ultrafast_input_over_272k": {
+              "input_price": 24.0,
+              "output_price": 90.0,
+              "cache_read": 1.2,
+              "cache_write": 30.0,
+              "cache_write_12h": 60.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-6.1-sol",
@@ -8659,6 +9212,19 @@
                 "provider": {
                   "body": {
                     "service_tier": "priority"
+                  }
+                }
+              },
+              "ultrafast": {
+                "cost": {
+                  "input": 12.0,
+                  "output": 60.0,
+                  "cache_read": 0.6,
+                  "cache_write": 15.0
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "ultrafast"
                   }
                 }
               }
@@ -8723,6 +9289,32 @@
           "cache_read_ratio": 0.05,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 2.5
+            },
+            "input_over_272k": {
+              "input_price": 2.0,
+              "output_price": 7.5,
+              "cache_read": 0.1,
+              "cache_write": 2.5,
+              "cache_write_12h": 5.0
+            },
+            "fast": {
+              "input_price": 2.0,
+              "output_price": 10.0,
+              "cache_read": 0.1,
+              "cache_write": 2.5,
+              "cache_write_12h": 5.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 4.0,
+              "output_price": 15.0,
+              "cache_read": 0.2,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-6.1-terra",
@@ -8832,6 +9424,32 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 0.25
+            },
+            "input_over_272k": {
+              "input_price": 0.2,
+              "output_price": 0.75,
+              "cache_read": 0.02,
+              "cache_write": 0.25,
+              "cache_write_12h": 0.5
+            },
+            "fast": {
+              "input_price": 0.2,
+              "output_price": 1.0,
+              "cache_read": 0.02,
+              "cache_write": 0.25,
+              "cache_write_12h": 0.5
+            },
+            "fast_input_over_272k": {
+              "input_price": 0.4,
+              "output_price": 1.5,
+              "cache_read": 0.04,
+              "cache_write": 0.5,
+              "cache_write_12h": 1.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-6-luna",
@@ -8856,11 +9474,30 @@
           "tool_call": true,
           "structured_output": true,
           "temperature": false,
+          "release_date": "2026-09-22",
+          "last_updated": "2026-09-22",
           "open_weights": false,
           "limit": {
             "context": 1050000,
             "input": 922000,
             "output": 128000
+          },
+          "experimental": {
+            "modes": {
+              "fast": {
+                "cost": {
+                  "input": 0.2,
+                  "output": 1.0,
+                  "cache_read": 0.02,
+                  "cache_write": 0.25
+                },
+                "provider": {
+                  "body": {
+                    "service_tier": "priority"
+                  }
+                }
+              }
+            }
           },
           "cost": {
             "input": 0.1,
@@ -9474,8 +10111,34 @@
           "input_price": 0.2,
           "output_price": 1.2,
           "cache_read_ratio": 0.1,
-          "cache_write_ratio": null,
+          "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 0.5
+            },
+            "input_over_272k": {
+              "input_price": 0.4,
+              "output_price": 1.8,
+              "cache_read": 0.04,
+              "cache_write": 0.5,
+              "cache_write_12h": 1.0
+            },
+            "fast": {
+              "input_price": 0.4,
+              "output_price": 2.4,
+              "cache_read": 0.04,
+              "cache_write": 0.5,
+              "cache_write_12h": 1.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 0.8,
+              "output_price": 3.6,
+              "cache_read": 0.08,
+              "cache_write": 1.0,
+              "cache_write_12h": 2.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-5.6-luna",
@@ -10494,6 +11157,32 @@
           "cache_read_ratio": 0.1,
           "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 10.0
+            },
+            "input_over_272k": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            },
+            "fast": {
+              "input_price": 8.0,
+              "output_price": 40.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 16.0,
+              "output_price": 60.0,
+              "cache_read": 1.6,
+              "cache_write": 20.0,
+              "cache_write_12h": 40.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-5.6",
@@ -10870,8 +11559,34 @@
           "input_price": 2,
           "output_price": 12,
           "cache_read_ratio": 0.1,
-          "cache_write_ratio": null,
+          "cache_write_ratio": 1.25,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "cache_12h": {
+              "cache_write": 5.0
+            },
+            "input_over_272k": {
+              "input_price": 4.0,
+              "output_price": 18.0,
+              "cache_read": 0.4,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast": {
+              "input_price": 4.0,
+              "output_price": 24.0,
+              "cache_read": 0.4,
+              "cache_write": 5.0,
+              "cache_write_12h": 10.0
+            },
+            "fast_input_over_272k": {
+              "input_price": 8.0,
+              "output_price": 36.0,
+              "cache_read": 0.8,
+              "cache_write": 10.0,
+              "cache_write_12h": 20.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "gpt-5.6-terra",
@@ -12542,14 +13257,37 @@
             ]
           },
           "context_window": 500000,
-          "max_output_tokens": null,
+          "max_output_tokens": 500000,
           "input_price": 2.0,
           "output_price": 6.0,
           "cache_read_ratio": 0.25,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_200k": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 1.0
+            },
+            "priority": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 1.0
+            },
+            "priority_input_over_200k": {
+              "input_price": 8.0,
+              "output_price": 24.0,
+              "cache_read": 2.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
+          "release_date": "2026-09-21",
+          "last_updated": "2026-09-21",
+          "limit": {
+            "context": 500000,
+            "output": 500000
+          },
           "cost": {
             "input": 2.0,
             "output": 6.0,
@@ -12851,6 +13589,11 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "per_unit": {
+              "per_image": 0.02
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-imagine-image",
@@ -12904,6 +13647,11 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "per_unit": {
+              "per_second": 0.05
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-imagine-video",
@@ -12956,6 +13704,23 @@
           "cache_read_ratio": 0.15,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_200k": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 0.6
+            },
+            "priority": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 0.6
+            },
+            "priority_input_over_200k": {
+              "input_price": 8.0,
+              "output_price": 24.0,
+              "cache_read": 1.2
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-4.5",
@@ -13115,6 +13880,11 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "per_unit": {
+              "per_second": 0.08
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-imagine-video-1.5",
@@ -13167,6 +13937,11 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "per_unit": {
+              "per_image": 0.04
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-imagine-image-2.0",
@@ -13219,6 +13994,23 @@
           "cache_read_ratio": 0.25,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_200k": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 1.0
+            },
+            "priority": {
+              "input_price": 4.0,
+              "output_price": 12.0,
+              "cache_read": 1.0
+            },
+            "priority_input_over_200k": {
+              "input_price": 8.0,
+              "output_price": 24.0,
+              "cache_read": 2.0
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "grok-4.6",
@@ -13306,7 +14098,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "grok-imagine-image-quality",
           "name": "Grok Imagine Image Quality",
           "description": "Image model for prompt-driven generation, editing, and visual design workflows",
@@ -14033,7 +14825,7 @@
               "text"
             ]
           },
-          "context_window": null,
+          "context_window": 1048576,
           "max_output_tokens": 131072,
           "input_price": 0.435,
           "output_price": 0.87,
@@ -14041,7 +14833,19 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "release_date": "2026-09-22",
+          "last_updated": "2026-09-22",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 0.435,
+            "output": 0.87,
+            "cache_read": 0.0036,
+            "cache_write": 0
+          }
         },
         "mimo-v2.6-flash": {
           "model_key": "mimo-v2.6-flash",
@@ -14072,7 +14876,7 @@
               "text"
             ]
           },
-          "context_window": null,
+          "context_window": 1048576,
           "max_output_tokens": 131072,
           "input_price": 0.14,
           "output_price": 0.28,
@@ -14080,7 +14884,19 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "release_date": "2026-09-22",
+          "last_updated": "2026-09-22",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028,
+            "cache_write": 0
+          }
         },
         "mimo-v2.6-pro-ultraspeed": {
           "model_key": "mimo-v2.6-pro-ultraspeed",
@@ -14111,7 +14927,7 @@
               "text"
             ]
           },
-          "context_window": null,
+          "context_window": 1048576,
           "max_output_tokens": 131072,
           "input_price": 4.35,
           "output_price": 8.7,
@@ -14119,7 +14935,19 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "release_date": "2026-09-22",
+          "last_updated": "2026-09-22",
+          "limit": {
+            "context": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 4.35,
+            "output": 8.7,
+            "cache_read": 0.036,
+            "cache_write": 0
+          }
         },
         "mimo-v2.5": {
           "model_key": "mimo-v2.5",
@@ -14150,7 +14978,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "mimo-v2-omni": {
           "model_key": "mimo-v2-omni",
@@ -14182,7 +15010,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "mimo-v2-pro": {
           "model_key": "mimo-v2-pro",
@@ -14210,7 +15038,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "mimo-v2.5-pro": {
           "model_key": "mimo-v2.5-pro",
@@ -14238,7 +15066,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "mimo-v2.5-pro-ultraspeed": {
           "model_key": "mimo-v2.5-pro-ultraspeed",
@@ -14266,7 +15094,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         },
         "mimo-v2-flash": {
           "model_key": "mimo-v2-flash",
@@ -14294,7 +15122,7 @@
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "archived"
         }
       }
     },
@@ -14332,11 +15160,18 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "long_context": {
+              "context_window": 262144,
+              "state_plus_longest_question": 262144,
+              "header": "TypeSafe-Danger-Zone-Long-Context: true"
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "jev-latest",
           "name": "Jev Latest",
-          "description": "TypeSafe System One model (stable alias). Typed Choice/Score/Noul decisions with calibrated confidence; currently resolves to jev-1.13.0.",
+          "description": "TypeSafe System One model (stable alias). Typed Choice/Score/Noul decisions with calibrated confidence; currently resolves to jev-1.14.0.",
           "family": "jev",
           "attachment": false,
           "reasoning": false,
@@ -14345,7 +15180,7 @@
           "structured_output": true,
           "temperature": false,
           "release_date": "2026-09-15",
-          "last_updated": "2026-09-30",
+          "last_updated": "2026-10-14",
           "open_weights": false,
           "limit": {
             "context": 64000,
@@ -14354,7 +15189,7 @@
             "state_plus_longest_question": 32000
           },
           "aliases": [
-            "jev-1.13.0"
+            "jev-1.14.0"
           ],
           "experimental": {
             "endpoint": {
@@ -14376,7 +15211,7 @@
             "notes": [
               "Not OpenAI chat/completions; do not send messages[].",
               "Billed on input tokens only; output tokens are free.",
-              "Response model field returns the resolved versioned id (e.g. jev-1.13.0)."
+              "Response model field returns the resolved versioned id (e.g. jev-1.14.0)."
             ]
           },
           "cost": {
@@ -14415,11 +15250,18 @@
           "cache_read_ratio": null,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "long_context": {
+              "context_window": 262144,
+              "state_plus_longest_question": 262144,
+              "header": "TypeSafe-Danger-Zone-Long-Context: true"
+            }
+          },
           "pricing_source": "manual",
           "status": "active",
           "id": "jev-preview",
           "name": "Jev Preview",
-          "description": "TypeSafe System One preview alias. Moves ahead of jev-latest when a preview build exists; currently also jev-1.13.0.",
+          "description": "TypeSafe System One preview alias. Moves ahead of jev-latest when a preview build exists; currently also jev-1.14.0.",
           "family": "jev",
           "attachment": false,
           "reasoning": false,
@@ -14428,7 +15270,7 @@
           "structured_output": true,
           "temperature": false,
           "release_date": "2026-09-15",
-          "last_updated": "2026-09-30",
+          "last_updated": "2026-10-14",
           "open_weights": false,
           "limit": {
             "context": 64000,
@@ -14437,7 +15279,7 @@
             "state_plus_longest_question": 32000
           },
           "aliases": [
-            "jev-1.13.0"
+            "jev-1.14.0"
           ],
           "experimental": {
             "endpoint": {
@@ -14459,7 +15301,7 @@
             "notes": [
               "Not OpenAI chat/completions; do not send messages[].",
               "Billed on input tokens only; output tokens are free.",
-              "Response model field returns the resolved versioned id (e.g. jev-1.13.0)."
+              "Response model field returns the resolved versioned id (e.g. jev-1.14.0)."
             ]
           },
           "cost": {
@@ -14500,10 +15342,10 @@
           },
           "context_window": 1000000,
           "max_output_tokens": 131072,
-          "input_price": 2.0,
-          "output_price": 6.0,
-          "cache_read_ratio": 0.125,
-          "cache_write_ratio": 1.25,
+          "input_price": 1.65,
+          "output_price": 4.951,
+          "cache_read_ratio": 0.12484848,
+          "cache_write_ratio": 1.25030303,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
           "status": "active",
@@ -14529,27 +15371,86 @@
             "output": 131072
           },
           "cost": {
-            "input": 2.0,
-            "output": 6.0,
-            "cache_read": 0.25,
-            "cache_write": 2.5
+            "input": 1.65,
+            "output": 4.951,
+            "cache_read": 0.206,
+            "cache_write": 2.063
           },
           "pricing_variants": {
-            "prompt_over_100k": {
-              "input_price": 0.5,
-              "output_price": 2.5,
-              "cache_read": 0.05,
-              "cache_write": 0.625,
-              "cache_write_1h": 1.0
-            },
             "explicit_cache_read": {
-              "cache_read": 0.17
+              "cache_read": 0.137
             }
           },
           "aliases": [
             "qwen3.8-max-0902",
             "qwen3.8-max-2026-09-02"
           ]
+        },
+        "qwen3.8-flash": {
+          "model_key": "qwen3.8-flash",
+          "display_name": "Qwen3.8-Flash",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 131072,
+          "input_price": 0.113,
+          "output_price": 0.382,
+          "cache_read_ratio": 0.12389381,
+          "cache_write_ratio": 1.56637168,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "explicit_cache_read": {
+              "cache_read": 0.014
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.8-flash",
+          "name": "Qwen3.8-Flash",
+          "description": "Fast multimodal Qwen3.8 with 1M context for coding and agent tasks",
+          "family": "qwen-flash",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 131072
+          },
+          "cost": {
+            "input": 0.113,
+            "output": 0.382,
+            "cache_read": 0.014,
+            "cache_write": 0.177
+          }
         },
         "qwen3.7-max": {
           "model_key": "qwen3.7-max",
@@ -14698,6 +15599,400 @@
             "qwen3.7-plus-2026-05-26"
           ]
         },
+        "qwen3.7-flash": {
+          "model_key": "qwen3.7-flash",
+          "display_name": "Qwen3.7-Flash",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 131072,
+          "input_price": 0.028,
+          "output_price": 0.11,
+          "cache_read_ratio": 0.21428571,
+          "cache_write_ratio": 1.21428571,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_32k": {
+              "input_price": 0.083,
+              "output_price": 0.33,
+              "cache_read": 0.017,
+              "cache_write": 0.103,
+              "explicit_cache_read": 0.008
+            },
+            "input_over_256k": {
+              "input_price": 0.165,
+              "output_price": 0.66,
+              "cache_read": 0.033,
+              "cache_write": 0.206,
+              "explicit_cache_read": 0.017
+            },
+            "explicit_cache_read": {
+              "cache_read": 0.003
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.7-flash",
+          "name": "Qwen3.7-Flash",
+          "description": "Low-cost Qwen3.7 vision-language Flash model with tiered 1M context pricing",
+          "family": "qwen-flash",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-07-15",
+          "last_updated": "2026-07-15",
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 131072
+          },
+          "cost": {
+            "input": 0.028,
+            "output": 0.11,
+            "cache_read": 0.006,
+            "cache_write": 0.034
+          },
+          "aliases": [
+            "qwen3.7-flash-2026-07-15"
+          ]
+        },
+        "qwen3.6-plus": {
+          "model_key": "qwen3.6-plus",
+          "display_name": "Qwen3.6-Plus",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 65536,
+          "input_price": 0.276,
+          "output_price": 1.651,
+          "cache_read_ratio": 0.10144928,
+          "cache_write_ratio": 1.24637681,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_256k": {
+              "input_price": 1.101,
+              "output_price": 6.602,
+              "cache_read": 0.111,
+              "cache_write": 1.376
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.6-plus",
+          "name": "Qwen3.6-Plus",
+          "description": "Qwen3.6 vision-language Plus model for agent and coding workloads",
+          "family": "qwen-plus",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-04-02",
+          "last_updated": "2026-04-02",
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.276,
+            "output": 1.651,
+            "cache_read": 0.028,
+            "cache_write": 0.344
+          },
+          "aliases": [
+            "qwen3.6-plus-2026-04-02"
+          ]
+        },
+        "qwen3.6-flash": {
+          "model_key": "qwen3.6-flash",
+          "display_name": "Qwen3.6-Flash",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 65536,
+          "input_price": 0.165,
+          "output_price": 0.99,
+          "cache_read_ratio": 0.1030303,
+          "cache_write_ratio": 1.24848485,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_256k": {
+              "input_price": 0.66,
+              "output_price": 3.961,
+              "cache_read": 0.066,
+              "cache_write": 0.825
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.6-flash",
+          "name": "Qwen3.6-Flash",
+          "description": "Qwen3.6 vision-language Flash model balancing speed and cost",
+          "family": "qwen-flash",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-04-16",
+          "last_updated": "2026-04-16",
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.165,
+            "output": 0.99,
+            "cache_read": 0.017,
+            "cache_write": 0.206
+          },
+          "aliases": [
+            "qwen3.6-flash-2026-04-16"
+          ]
+        },
+        "qwen3.5-plus": {
+          "model_key": "qwen3.5-plus",
+          "display_name": "Qwen3.5-Plus",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 65536,
+          "input_price": 0.115,
+          "output_price": 0.688,
+          "cache_read_ratio": 0.10434783,
+          "cache_write_ratio": 1.24347826,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_128k": {
+              "input_price": 0.287,
+              "output_price": 1.72,
+              "cache_read": 0.029,
+              "cache_write": 0.358
+            },
+            "input_over_256k": {
+              "input_price": 0.573,
+              "output_price": 3.44,
+              "cache_read": 0.057,
+              "cache_write": 0.717
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.5-plus",
+          "name": "Qwen3.5-Plus",
+          "description": "Qwen3.5 hybrid-architecture vision-language Plus model with tiered 1M context pricing",
+          "family": "qwen-plus",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-02-15",
+          "last_updated": "2026-02-15",
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.115,
+            "output": 0.688,
+            "cache_read": 0.012,
+            "cache_write": 0.143
+          },
+          "aliases": [
+            "qwen3.5-plus-2026-02-15",
+            "qwen3.5-plus-2026-04-20"
+          ]
+        },
+        "qwen3.5-flash": {
+          "model_key": "qwen3.5-flash",
+          "display_name": "Qwen3.5-Flash",
+          "provider": "qwen",
+          "category": "chat",
+          "capabilities": {
+            "reasoning": true,
+            "tool_calling": true,
+            "structured_output": true,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": true
+          },
+          "supported_endpoint_types": [
+            "openai"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "context_window": 1000000,
+          "max_output_tokens": 65536,
+          "input_price": 0.029,
+          "output_price": 0.287,
+          "cache_read_ratio": 0.10344828,
+          "cache_write_ratio": 1.24137931,
+          "cache_write_1h_ratio": null,
+          "pricing_variants": {
+            "input_over_128k": {
+              "input_price": 0.115,
+              "output_price": 1.147,
+              "cache_read": 0.012,
+              "cache_write": 0.143
+            },
+            "input_over_256k": {
+              "input_price": 0.172,
+              "output_price": 1.72,
+              "cache_read": 0.017,
+              "cache_write": 0.215
+            }
+          },
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "qwen3.5-flash",
+          "name": "Qwen3.5-Flash",
+          "description": "Qwen3.5 hybrid-architecture vision-language Flash model with tiered 1M context pricing",
+          "family": "qwen-flash",
+          "attachment": true,
+          "reasoning": true,
+          "reasoning_options": [
+            {
+              "type": "toggle"
+            }
+          ],
+          "tool_call": true,
+          "structured_output": true,
+          "temperature": true,
+          "release_date": "2026-02-23",
+          "last_updated": "2026-02-23",
+          "open_weights": false,
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "cost": {
+            "input": 0.029,
+            "output": 0.287,
+            "cache_read": 0.003,
+            "cache_write": 0.036
+          },
+          "aliases": [
+            "qwen3.5-flash-2026-02-23"
+          ]
+        },
         "qwen3-max": {
           "model_key": "qwen3-max",
           "display_name": "Qwen3-Max",
@@ -14730,7 +16025,7 @@
           "cache_write_ratio": 1.24791086,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active",
+          "status": "archived",
           "id": "qwen3-max",
           "name": "Qwen3-Max",
           "description": "Qwen3 Max with integrated thinking and tool use for complex agents",

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>模型目录</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Literata:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside id="sidebar" class="lg-regular">
+    <div class="sb-head"><h1 class="sb-title">模型目录</h1></div>
+    <nav id="sb-nav" class="sb-nav"></nav>
+    <div class="sb-foot">
+      <button class="nav-item" data-v="check"><span class="ni-ic" data-ic="list"></span><span>数据检查</span><span class="bdg bdg-warn" id="sb-check-cnt"></span></button>
+    </div>
+  </aside>
+  <main id="main">
+    <div id="toolbar" class="lg-regular">
+      <div class="tb-search">
+        <span class="tb-ic" data-ic="search"></span>
+        <input id="search" type="search" placeholder="搜索模型名、key、别名" autocomplete="off">
+        <span class="sk-kbd">⌘K</span>
+        <button id="search-clear" class="ibtn" aria-label="清除搜索"><span data-ic="close" data-s="14"></span></button>
+      </div>
+      <div class="tb-right">
+        <div id="seg-status" class="segmented">
+          <button data-v="active">在售</button><button data-v="archived">已归档</button><button data-v="all">全部</button>
+        </div>
+        <label class="dd-cat"><select id="f-cat" aria-label="类别"></select><span class="dd-ic" data-ic="chevron" data-s="14"></span></label>
+        <button id="btn-filter" class="btn-filter"><span data-ic="filter" data-s="14"></span><span>筛选</span><span id="f-count" class="bdg bdg-warn hidden"></span></button>
+      </div>
+    </div>
+    <div id="pagehead">
+      <h2 id="ph-title"></h2>
+      <p id="ph-sub"></p>
+      <div id="brand-chips" class="chips"></div>
+    </div>
+    <section id="view-models"><div id="table-card" class="tcard mat-thick"></div></section>
+    <section id="view-check" class="hidden"><div id="check-body"></div></section>
+  </main>
+</div>
+<div id="scrim"></div>
+<aside id="panel" class="lg-thick" aria-hidden="true"></aside>
+<div id="popover" class="lg-regular"></div>
+<script src="app.js"></script>
+</body>
+</html>

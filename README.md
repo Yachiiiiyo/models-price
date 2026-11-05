@@ -57,3 +57,9 @@ xLyra 计费不读 `pricing_variants`，只读下面两处，新增或修改长�
 模型下线时将 `status` 改为 `archived`，不要删除历史模型。模型别名写入 `aliases`，规范键写入 `model_key`。别名不能等于其他模型的 `model_key`（xLyra 先按 key 匹配，这样的别名永远不会生效），同一个别名只能属于一个模型。
 
 修改后先使用 `catalog.schema.json` 校验 JSON，再检查协议、价格、上下文限制和别名是否完整。
+
+## 浏览页面
+
+GitHub Pages 静态浏览页：<https://yachiiiiyo.github.io/models-price/>
+
+本地预览：在仓库根目录运行 `python3 -m http.server`，然后打开 <http://localhost:8000>（直接双击 html 会被浏览器拦截 fetch）。

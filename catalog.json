@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "catalog_version": "1.8.2",
-  "updated_at": "2026-11-05T05:13:00Z",
+  "catalog_version": "1.9.0",
+  "updated_at": "2026-11-06T00:00:00Z",
   "brands": {
     "minimax": {
       "display_name": "minimax",
@@ -11184,6 +11184,13 @@
             "input": 5,
             "output": 30,
             "cache_read": 1.25
+          },
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
           }
         },
         "gpt-3.5-turbo": {
@@ -12635,20 +12642,42 @@
           "display_name": "gpt-image-2.5-sunburst-2026-09-08",
           "provider": "openai",
           "category": "image",
-          "capabilities": {},
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
           "supported_endpoint_types": [
             "openai-image"
           ],
-          "modalities": {},
-          "context_window": null,
-          "max_output_tokens": null,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
           "input_price": 5.0,
-          "output_price": null,
+          "output_price": 30.0,
           "cache_read_ratio": 0.25,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          }
         },
         "gpt-5.1-codex-mini": {
           "model_key": "gpt-5.1-codex-mini",
@@ -12683,20 +12712,42 @@
           "display_name": "gpt-image-2.5-flare-2026-09-08",
           "provider": "openai",
           "category": "image",
-          "capabilities": {},
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
           "supported_endpoint_types": [
             "openai-image"
           ],
-          "modalities": {},
-          "context_window": null,
-          "max_output_tokens": null,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
           "input_price": 5.0,
-          "output_price": null,
+          "output_price": 30.0,
           "cache_read_ratio": 0.25,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          }
         },
         "gpt-live-1": {
           "model_key": "gpt-live-1",
@@ -13153,20 +13204,42 @@
           "display_name": "gpt-image-2-2026-04-21",
           "provider": "openai",
           "category": "image",
-          "capabilities": {},
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
           "supported_endpoint_types": [
             "openai-image"
           ],
-          "modalities": {},
-          "context_window": null,
-          "max_output_tokens": null,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
           "input_price": 5.0,
-          "output_price": 10.0,
+          "output_price": 30.0,
           "cache_read_ratio": 0.25,
           "cache_write_ratio": null,
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
-          "status": "active"
+          "status": "active",
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          }
         },
         "gpt-live-transcribe": {
           "model_key": "gpt-live-transcribe",
@@ -13361,6 +13434,258 @@
           "cache_write_1h_ratio": null,
           "pricing_source": "manual",
           "status": "archived"
+        },
+        "gpt-image-2.5-sunburst": {
+          "model_key": "gpt-image-2.5-sunburst",
+          "display_name": "gpt-image-2.5-sunburst",
+          "provider": "openai",
+          "category": "image",
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
+          "supported_endpoint_types": [
+            "openai-image"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
+          "input_price": 5.0,
+          "output_price": 30.0,
+          "cache_read_ratio": 0.25,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "gpt-image-2.5-sunburst",
+          "name": "gpt-image-2.5-sunburst",
+          "description": "GPT Image 2.5 Sunburst: most capable image generation and editing model, best for editing precision",
+          "family": "gpt-image",
+          "attachment": true,
+          "reasoning": false,
+          "tool_call": false,
+          "temperature": false,
+          "release_date": "2026-09-08",
+          "last_updated": "2026-09-08",
+          "open_weights": false,
+          "limit": {
+            "context": 0,
+            "input": 0,
+            "output": 0
+          },
+          "cost": {
+            "input": 5,
+            "output": 30,
+            "cache_read": 1.25
+          },
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          }
+        },
+        "gpt-image-2.5-flare": {
+          "model_key": "gpt-image-2.5-flare",
+          "display_name": "gpt-image-2.5-flare",
+          "provider": "openai",
+          "category": "image",
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
+          "supported_endpoint_types": [
+            "openai-image"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
+          "input_price": 5.0,
+          "output_price": 30.0,
+          "cache_read_ratio": 0.25,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "gpt-image-2.5-flare",
+          "name": "gpt-image-2.5-flare",
+          "description": "GPT Image 2.5 Flare: fastest model for high-quality everyday image generation",
+          "family": "gpt-image",
+          "attachment": true,
+          "reasoning": false,
+          "tool_call": false,
+          "temperature": false,
+          "release_date": "2026-09-08",
+          "last_updated": "2026-09-08",
+          "open_weights": false,
+          "limit": {
+            "context": 0,
+            "input": 0,
+            "output": 0
+          },
+          "cost": {
+            "input": 5,
+            "output": 30,
+            "cache_read": 1.25
+          },
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          }
+        },
+        "gpt-image-2.6-sunburst": {
+          "model_key": "gpt-image-2.6-sunburst",
+          "display_name": "gpt-image-2.6-sunburst",
+          "provider": "openai",
+          "category": "image",
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
+          "supported_endpoint_types": [
+            "openai-image"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
+          "input_price": 5.0,
+          "output_price": 30.0,
+          "cache_read_ratio": 0.25,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "gpt-image-2.6-sunburst",
+          "name": "gpt-image-2.6-sunburst",
+          "description": "GPT Image 2.6 Sunburst: image generation and editing for detailed visual work",
+          "family": "gpt-image",
+          "attachment": true,
+          "reasoning": false,
+          "tool_call": false,
+          "temperature": false,
+          "open_weights": false,
+          "limit": {
+            "context": 0,
+            "input": 0,
+            "output": 0
+          },
+          "cost": {
+            "input": 5,
+            "output": 30,
+            "cache_read": 1.25
+          },
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          },
+          "release_date": "2026-11-05",
+          "last_updated": "2026-11-05"
+        },
+        "gpt-image-2.6-flare": {
+          "model_key": "gpt-image-2.6-flare",
+          "display_name": "gpt-image-2.6-flare",
+          "provider": "openai",
+          "category": "image",
+          "capabilities": {
+            "reasoning": false,
+            "tool_calling": false,
+            "structured_output": false,
+            "image_input": true,
+            "audio_input": false,
+            "video_input": false
+          },
+          "supported_endpoint_types": [
+            "openai-image"
+          ],
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "image"
+            ]
+          },
+          "context_window": 0,
+          "max_output_tokens": 0,
+          "input_price": 5.0,
+          "output_price": 30.0,
+          "cache_read_ratio": 0.25,
+          "cache_write_ratio": null,
+          "cache_write_1h_ratio": null,
+          "pricing_source": "manual",
+          "status": "active",
+          "id": "gpt-image-2.6-flare",
+          "name": "gpt-image-2.6-flare",
+          "description": "GPT Image 2.6 Flare: image generation and editing for fast iteration",
+          "family": "gpt-image",
+          "attachment": true,
+          "reasoning": false,
+          "tool_call": false,
+          "temperature": false,
+          "open_weights": false,
+          "limit": {
+            "context": 0,
+            "input": 0,
+            "output": 0
+          },
+          "cost": {
+            "input": 5,
+            "output": 30,
+            "cache_read": 1.25
+          },
+          "pricing_variants": {
+            "image_tokens": {
+              "input_price": 8.0,
+              "output_price": 30.0,
+              "cache_read": 2.0
+            }
+          },
+          "release_date": "2026-11-05",
+          "last_updated": "2026-11-05"
         }
       }
     },
